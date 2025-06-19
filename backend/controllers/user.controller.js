@@ -51,7 +51,7 @@ export const loginUser = async (req, res) => {
     try {
         const { email, password, role } = req.body;
 
-        if (!email || !password) {
+        if (!email || !password || !role) {
             return res.status(400).json({
                 message: "Something is Missing!!!",
                 success: false
@@ -94,7 +94,8 @@ export const loginUser = async (req, res) => {
             maxAge: 60 * 60 * 1000, // 1 hour
             sameSite: "Strict",
         }).json({
-            message: "Login successful",
+            success: true,
+            message: "Login successful, Welcome " + user.fullName + "!",
             token,
             user: { id: user._id, fullName: user.fullName, role: user.role, email: user.email, phoneNumber: user.phoneNumber, profile: user.profile }
         });

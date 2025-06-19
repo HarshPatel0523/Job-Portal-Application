@@ -1,6 +1,7 @@
 import express from 'express';
 import isAuthenticated from '../middlewares/auth.middleware.js';
 import { applyJob, getApplicants, getApplications, updateApplicationStatus } from '../controllers/application.controller.js';
+import { singleUpload } from '../middlewares/multer.middleware.js';
 
 const router = express.Router();
 
