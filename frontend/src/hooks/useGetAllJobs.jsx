@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { setAllJobs } from '@/redux/jobSlice'
 import { JOB_API_END_POINT } from '@/utils/constants'
 import axios from 'axios'
@@ -19,7 +20,7 @@ const useGetAllJobs = () => {
             }
         }
         fetchAllJobs();
-    },[])
+    },[dispatch, searchedQuery])
 }
 
 export default useGetAllJobs

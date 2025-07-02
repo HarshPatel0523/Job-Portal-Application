@@ -30,7 +30,7 @@ const NavBar = () => {
     }
     return (
         <div className="bg-white">
-            <div className="flex justify-between items-center mx-auto max-w-7xl px-4 py-4 h-16">
+            <div className="flex justify-between items-center ml-8 max-w-7xl py-4 h-16">
                 <div>
                     <h1 className="text-2xl font-bold">Job <span className="text-[#F83002]">Portal</span></h1>
                 </div>
